@@ -1,8 +1,9 @@
 package heroes;
 
-import exceptions.InvalidArmorException;
-import exceptions.InvalidWeaponException;
-import items.*;
+import items.ArmorType;
+import items.EquipmentSlot;
+import items.Weapon;
+import items.WeaponType;
 
 import java.util.LinkedList;
 
@@ -11,10 +12,10 @@ public class Mage extends Hero {
         super(name);
         initializeSlots();
         initializeHeroAttributes(1, 1, 8);
-        validArmorAndWeaponTypes();
+        addValidArmorAndWeaponTypes();
     }
 
-    public void validArmorAndWeaponTypes() {
+    public void addValidArmorAndWeaponTypes() {
         //Weapons
         LinkedList<WeaponType> validWeapons = new LinkedList<>();
         validWeapons.add(WeaponType.Staff);
@@ -34,28 +35,6 @@ public class Mage extends Hero {
         attributes.setDexterity(attributes.getDexterity() + 1);
         attributes.setStrength(attributes.getStrength() + 1);
         setLevelAttributes(attributes);
-    }
-
-    @Override
-    public void equip(Weapon weapon) throws InvalidWeaponException {
-        if(getValidWeaponTypes().indexOf(weapon.getWeaponType()) == -1) {
-            throw new InvalidWeaponException("Mage cannot equip " + weapon.getWeaponType() + "s");
-        }
-        else if(weapon.getRequiredLevel() > getLevel()) {
-            throw new InvalidWeaponException("Too low level to equip weapon");
-        } else addEquipment(EquipmentSlot.Weapon, weapon);
-    }
-
-    @Override
-    public void equip(Armor armor) throws InvalidArmorException {
-        if(getValidArmorTypes().indexOf(armor.getArmorType()) == -1) {
-            throw new InvalidArmorException("Mage cannot equip " + armor.getArmorType() + " armor");
-        }
-        else if(armor.getRequiredLevel() > getLevel()) {
-            throw new InvalidArmorException("Too low level to equip armor");
-        } else {
-            addEquipment(armor.getEquipmentSlot(), armor);
-        }
     }
 
     @Override
