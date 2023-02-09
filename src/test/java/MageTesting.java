@@ -31,6 +31,12 @@ public class MageTesting {
         assertEquals(1, mage.damage());
     }
 
+    @Test
+    void mageDisplayDetails() {
+        var mage = new Mage("someName");
+        assertNotEquals(null, mage.displayHeroDetails());
+    }
+
     //Item specific tests
 
     //Weapons
@@ -42,7 +48,18 @@ public class MageTesting {
         try {
             mage.equip(weapon);
         } catch (InvalidWeaponException e) {
+        }
+        assertEquals(null, mage.getEquipment().get(EquipmentSlot.Weapon));
+    }
 
+    @Test
+    void tooLowLevelToEquipWeapon() {
+        var mage = new Mage("someName");
+        var weapon = new Weapon("someStaff", 2, EquipmentSlot.Weapon, 3, WeaponType.Staff);
+
+        try {
+            mage.equip(weapon);
+        } catch (InvalidWeaponException e) {
         }
         assertEquals(null, mage.getEquipment().get(EquipmentSlot.Weapon));
     }
@@ -75,7 +92,20 @@ public class MageTesting {
         try {
             mage.equip(armor);
         } catch (InvalidArmorException e) {
+        }
 
+        assertEquals(null, mage.getEquipment().get(EquipmentSlot.Body));
+    }
+
+    @Test
+    void tooLowLevelToEquipArmor() {
+        var mage = new Mage("someName");
+        var armorAttributes = new HeroAttributes(2, 2, 1);
+        var armor = new Armor("clothArmor", 2, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
+
+        try {
+            mage.equip(armor);
+        } catch (InvalidArmorException e) {
         }
 
         assertEquals(null, mage.getEquipment().get(EquipmentSlot.Body));
