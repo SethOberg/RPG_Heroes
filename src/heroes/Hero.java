@@ -107,9 +107,25 @@ public abstract class Hero {
 
     public abstract void levelUp();
 
-    public abstract void equip(Weapon weapon) throws InvalidWeaponException;
+    public void equip(Weapon weapon) throws InvalidWeaponException {
+        if(getValidWeaponTypes().indexOf(weapon.getWeaponType()) == -1) {
+            throw new InvalidWeaponException(getClass().getSimpleName() + "s cannot equip " + weapon.getWeaponType() + "s");
+        }
+        else if(weapon.getRequiredLevel() > getLevel()) {
+            throw new InvalidWeaponException("Too low level to equip weapon");
+        } else addEquipment(EquipmentSlot.Weapon, weapon);
+    }
 
-    public abstract void equip(Armor armor) throws InvalidArmorException;
+    public void equip(Armor armor) throws InvalidArmorException {
+        if(getValidArmorTypes().indexOf(armor.getArmorType()) == -1) {
+            throw new InvalidArmorException(getClass().getSimpleName() + "s cannot equip " + armor.getArmorType() + " armor");
+        }
+        else if(armor.getRequiredLevel() > getLevel()) {
+            throw new InvalidArmorException("Too low level to equip armor");
+        } else {
+            addEquipment(armor.getEquipmentSlot(), armor);
+        }
+    }
 
     public abstract int damage();
 
@@ -122,6 +138,7 @@ public abstract class Hero {
         //Use map to get all armor types and add
         ArrayList<Armor> heroArmor = (ArrayList<Armor>) getEquipment().entrySet().stream()
                 .filter((item) -> item.getClass().isAssignableFrom(Armor.class))
+                .filter((item) -> item != null)
                 .map((armor) -> (Armor)armor).collect(Collectors.toList());
 
         for (Armor armor: heroArmor) {
