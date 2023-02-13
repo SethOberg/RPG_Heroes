@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="453df4ca-2ae1-4362-8ae4-02c3479ac872" name="Changes" comment="" />
+    <list default="true" id="453df4ca-2ae1-4362-8ae4-02c3479ac872" name="Changes" comment="Chore: added configuration files">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG_Heroes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RPG_Heroes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MageTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RangerTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RogueTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WarrorTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestWarrior.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2LPrMSpccGKKzccNpQL68PQnxi0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -13,12 +50,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SOber1/Desktop/Projekt/IntelliJProjects/Katas&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="JUnit.TestMage">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RPG_Heroes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG_Heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMage" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRanger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG_Heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRanger" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRogue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG_Heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRogue" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestWarrior" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG_Heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestWarrior" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMage" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestWarrior" />
+        <item itemvalue="JUnit.TestRogue" />
+        <item itemvalue="JUnit.TestRanger" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,6 +125,136 @@
       <option name="presentableId" value="Default" />
       <updated>1675783513293</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update gitignore">
+      <created>1675783568168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675783568168</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Feat: Added base classes">
+      <created>1675869189482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675869189482</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Feat: Fixed Mage class">
+      <created>1675937760809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675937760809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor: moved functionality to base hero class">
+      <created>1675946246821</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675946246821</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactor: removed equip method from mage">
+      <created>1675946334449</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675946334449</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Feat: added warrior, ranger and rogue subclasses">
+      <created>1675946367197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675946367197</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor: changed project to maven project">
+      <created>1675949551956</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675949551956</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Test: added test cases for Mage class">
+      <created>1675957796260</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675957796260</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test: added more test cases for Mage class">
+      <created>1675958553264</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675958553264</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Test: added more tests">
+      <created>1676133432222</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676133432222</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Test: added tests for remaining heroes">
+      <created>1676136286114</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136286114</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Chore: added configuration files">
+      <created>1676136927620</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136927620</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update gitignore" />
+    <MESSAGE value="Feat: Added base classes" />
+    <MESSAGE value="Feat: Fixed Mage class" />
+    <MESSAGE value="Refactor: moved functionality to base hero class" />
+    <MESSAGE value="Refactor: removed equip method from mage" />
+    <MESSAGE value="Feat: added warrior, ranger and rogue subclasses" />
+    <MESSAGE value="Refactor: changed project to maven project" />
+    <MESSAGE value="Test: added test cases for Mage class" />
+    <MESSAGE value="Test: added more test cases for Mage class" />
+    <MESSAGE value="Test: added more tests" />
+    <MESSAGE value="Test: added tests for remaining heroes" />
+    <MESSAGE value="Chore: added configuration files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore: added configuration files" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RPG_Heroes$WarrorTesting.ic" NAME="WarrorTesting Coverage Results" MODIFIED="1676136210566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RPG_Heroes$MageTesting_testSomething.ic" NAME="MageTesting.testSomething Coverage Results" MODIFIED="1675952547663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RPG_Heroes$RogueTesting.ic" NAME="RogueTesting Coverage Results" MODIFIED="1676136200856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RPG_Heroes$RangerTesting.ic" NAME="RangerTesting Coverage Results" MODIFIED="1676136173867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RPG_Heroes$MageTesting.ic" NAME="MageTesting Coverage Results" MODIFIED="1675958307763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

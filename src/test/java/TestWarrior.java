@@ -8,22 +8,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class WarrorTesting {
+public class TestWarrior {
 
     @Test
-    void testLevel() {
+    public void testLevel() {
         var warrior = new Warrior("someName");
         assertEquals(1, warrior.getLevel());
     }
 
     @Test
-    void testLevelUp() {
+    public void testLevelUp() {
         var warrior = new Warrior("someName");
         warrior.levelUp();
         assertEquals(2, warrior.getLevel());
     }
     @Test
-    void warriorCanEquipWeapon() throws InvalidWeaponException {
+    public void testWarriorCanEquipWeapon() throws InvalidWeaponException {
         var warrior = new Warrior("someName");
         var weapon = new Weapon("someAxe", 1, EquipmentSlot.Weapon, 3, WeaponType.Axe);
 
@@ -32,7 +32,7 @@ public class WarrorTesting {
     }
 
     @Test
-    void weaponDealsDamage() throws InvalidWeaponException {
+    public void testWeaponDealsDamage() throws InvalidWeaponException {
         var warrior = new Warrior("someName");
         var weapon = new Weapon("someAxe", 1, EquipmentSlot.Weapon, 10, WeaponType.Axe);
 
@@ -42,7 +42,7 @@ public class WarrorTesting {
 
     //Armor
     @Test
-    void warriorCannotEquipArmor() {
+    public void testWarriorCannotEquipArmor() {
         var warrior = new Warrior("someName");
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("clothArmor", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
@@ -56,7 +56,7 @@ public class WarrorTesting {
     }
 
     @Test
-    void tooLowLevelToEquipArmor() {
+    public void testTooLowLevelToEquipArmor() {
         var warrior = new Warrior("someName");
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("plateArmor", 2, EquipmentSlot.Body, ArmorType.Plate, armorAttributes);
@@ -70,7 +70,7 @@ public class WarrorTesting {
     }
 
     @Test
-    void warriorCanEquipArmor() throws InvalidArmorException {
+    public void testWarriorCanEquipArmor() throws InvalidArmorException {
         var warrior = new Warrior("someName");
         var armorAttributes = new HeroAttributes(1, 1, 3);
         var armor = new Armor("plateArmor", 1, EquipmentSlot.Body, ArmorType.Plate, armorAttributes);

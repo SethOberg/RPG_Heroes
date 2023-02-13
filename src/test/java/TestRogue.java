@@ -8,22 +8,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class RogueTesting {
+public class TestRogue {
 
     @Test
-    void testLevel() {
+    public void testLevel() {
         var rogue = new Rogue("someName");
         assertEquals(1, rogue.getLevel());
     }
 
     @Test
-    void testLevelUp() {
+    public void testLevelUp() {
         var rogue = new Rogue("someName");
         rogue.levelUp();
         assertEquals(2, rogue.getLevel());
     }
     @Test
-    void rogueCanEquipWeapon() throws InvalidWeaponException {
+    public void testRogueCanEquipWeapon() throws InvalidWeaponException {
         var rogue = new Rogue("someName");
         var weapon = new Weapon("someSword", 1, EquipmentSlot.Weapon, 3, WeaponType.Sword);
 
@@ -32,7 +32,7 @@ public class RogueTesting {
     }
 
     @Test
-    void weaponDealsDamage() throws InvalidWeaponException {
+    public void testWeaponDealsDamage() throws InvalidWeaponException {
         var rogue = new Rogue("someName");
         var weapon = new Weapon("someSword", 1, EquipmentSlot.Weapon, 10, WeaponType.Sword);
 
@@ -42,7 +42,7 @@ public class RogueTesting {
 
     //Armor
     @Test
-    void rogueCannotEquipArmor() {
+    public void testRogueCannotEquipArmor() {
         var rogue = new Rogue("someName");
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("clothArmor", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
@@ -56,7 +56,7 @@ public class RogueTesting {
     }
 
     @Test
-    void tooLowLevelToEquipArmor() {
+    public void testTooLowLevelToEquipArmor() {
         var rogue = new Rogue("someName");
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("mailArmor", 2, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
@@ -70,7 +70,7 @@ public class RogueTesting {
     }
 
     @Test
-    void rogueCanEquipArmor() throws InvalidArmorException {
+    public void testRogueCanEquipArmor() throws InvalidArmorException {
         var rogue = new Rogue("someName");
         var armorAttributes = new HeroAttributes(1, 1, 3);
         var armor = new Armor("mailArmor", 1, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);

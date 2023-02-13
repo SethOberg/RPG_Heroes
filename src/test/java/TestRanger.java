@@ -8,24 +8,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class RangerTesting {
+public class TestRanger {
 
     //add failing test to see if CI works
     @Test
-    void testLevel() {
+    public void testLevel() {
         var ranger = new Ranger("someName");
         assertEquals(1, ranger.getLevel());
     }
 
     @Test
-    void testLevelUp() {
+    public void testLevelUp() {
         var ranger = new Ranger("someName");
         ranger.levelUp();
         assertEquals(2, ranger.getLevel());
     }
 
     @Test
-    void rangerCanEquipWeapon() throws InvalidWeaponException {
+    public void testRangerCanEquipWeapon() throws InvalidWeaponException {
         var ranger = new Ranger("someName");
         var weapon = new Weapon("someBow", 1, EquipmentSlot.Weapon, 3, WeaponType.Bow);
 
@@ -34,7 +34,7 @@ public class RangerTesting {
     }
 
     @Test
-    void weaponDealsDamage() throws InvalidWeaponException {
+    public void testWeaponDealsDamage() throws InvalidWeaponException {
         var ranger = new Ranger("someName");
         var weapon = new Weapon("someBow", 1, EquipmentSlot.Weapon, 10, WeaponType.Bow);
 
@@ -44,7 +44,7 @@ public class RangerTesting {
 
     //Armor
     @Test
-    void rangerCannotEquipArmor() {
+    public void testRangerCannotEquipArmor() {
         var ranger = new Ranger("someName");
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("cloth", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
@@ -58,7 +58,7 @@ public class RangerTesting {
     }
 
     @Test
-    void tooLowLevelToEquipArmor() {
+    public void testTooLowLevelToEquipArmor() {
         var ranger = new Ranger("someName");
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("mailArmor", 2, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
@@ -72,7 +72,7 @@ public class RangerTesting {
     }
 
     @Test
-    void rangerCanEquipArmor() throws InvalidArmorException {
+    public void testRangerCanEquipArmor() throws InvalidArmorException {
         var ranger = new Ranger("someName");
         var armorAttributes = new HeroAttributes(1, 1, 3);
         var armor = new Armor("mailArmor", 1, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
