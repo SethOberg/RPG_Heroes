@@ -38,6 +38,6 @@ permissions:
   contents: 'read'
   id-token: 'write'
   issues: 'write'
-  pull-requests: 'read'
+  pull-requests: 'write'
     
      
