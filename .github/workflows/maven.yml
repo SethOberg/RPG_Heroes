@@ -36,23 +36,19 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-  Tests:
-    name: Run Tests
+  build:
+    name: Build and Run Tests
     runs-on: ubuntu-latest
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-      issues: 'write'
-      pull-requests: 'write'
-      actions: 'read'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
       - name: Build and Run Tests
         run: mvn test --batch-mode --fail-at-end
       - name: Publish Test Report
-        if: success() || failure()
-        uses: scacap/action-surefire-report@v1
+        uses: mikepenz/action-junit-report@v3
+        if: success() || failure() # always run even if the previous step fails
+        with:
+          report_paths: '**/build/test-results/test/TEST-*.xml'
 
     
      
