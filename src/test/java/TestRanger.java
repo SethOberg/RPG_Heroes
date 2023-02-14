@@ -1,12 +1,12 @@
 import exceptions.InvalidArmorException;
 import exceptions.InvalidWeaponException;
 import heroes.HeroAttributes;
+import heroes.Mage;
 import heroes.Ranger;
 import items.*;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestRanger {
 
@@ -18,6 +18,31 @@ public class TestRanger {
     }
 
     @Test
+    public void testRangerBaseStats() {
+        var ranger = new Ranger("someName");
+        var rangerBaseStats = ranger.getLevelAttributes();
+
+        var rangerBaseStatsOk = rangerBaseStats.getStrength() == 1
+                && rangerBaseStats.getDexterity() == 7
+                && rangerBaseStats.getIntelligence() == 1 ;
+
+        assertEquals(true, rangerBaseStatsOk);
+    }
+
+    @Test
+    public void testRangerStatsLevelUp() {
+        var ranger = new Ranger("someName");
+        ranger.levelUp();
+        var mageBaseStats = ranger.getLevelAttributes();
+
+        var rangerBaseStatsOk = mageBaseStats.getStrength() == 2
+                && mageBaseStats.getDexterity() == 12
+                && mageBaseStats.getIntelligence() == 2 ;
+
+        assertEquals(true, rangerBaseStatsOk);
+    }
+
+    @Test
     public void testLevelUp() {
         var ranger = new Ranger("someName");
         ranger.levelUp();
@@ -25,12 +50,11 @@ public class TestRanger {
     }
 
     @Test
-    public void testRangerCanEquipWeapon() throws InvalidWeaponException {
+    public void testRangerCanEquipWeapon() {
         var ranger = new Ranger("someName");
         var weapon = new Weapon("someBow", 1, EquipmentSlot.Weapon, 3, WeaponType.Bow);
 
-        ranger.equip(weapon);
-        assertNotEquals(null, ranger.getEquipment().get(EquipmentSlot.Weapon));
+       assertDoesNotThrow(() -> ranger.equip(weapon));
     }
 
     @Test
@@ -49,12 +73,7 @@ public class TestRanger {
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("cloth", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
 
-        try {
-            ranger.equip(armor);
-        } catch (InvalidArmorException e) {
-        }
-
-        assertEquals(null, ranger.getEquipment().get(EquipmentSlot.Body));
+        assertThrows(InvalidArmorException.class, () -> ranger.equip(armor));
     }
 
     @Test
@@ -63,21 +82,15 @@ public class TestRanger {
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("mailArmor", 2, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
 
-        try {
-            ranger.equip(armor);
-        } catch (InvalidArmorException e) {
-        }
-
-        assertEquals(null, ranger.getEquipment().get(EquipmentSlot.Body));
+        assertThrows(InvalidArmorException.class, () -> ranger.equip(armor));
     }
 
     @Test
-    public void testRangerCanEquipArmor() throws InvalidArmorException {
+    public void testRangerCanEquipArmor() {
         var ranger = new Ranger("someName");
         var armorAttributes = new HeroAttributes(1, 1, 3);
         var armor = new Armor("mailArmor", 1, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
 
-        ranger.equip(armor);
-        assertNotEquals(null, ranger.getEquipment().get(EquipmentSlot.Body));
+        assertDoesNotThrow(() -> ranger.equip(armor));
     }
 }

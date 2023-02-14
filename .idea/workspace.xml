@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="453df4ca-2ae1-4362-8ae4-02c3479ac872" name="Changes" comment="Chore: added configuration files">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="453df4ca-2ae1-4362-8ae4-02c3479ac872" name="Changes" comment="Test: renamed test classes and methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPG_Heroes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RPG_Heroes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MageTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestMage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RangerTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRanger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RogueTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WarrorTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestWarrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
   </component>
@@ -50,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SOber1/Desktop/Projekt/IntelliJProjects/Katas&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/SOber1/Desktop/Projekt/IntelliJProjects/Katas",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.TestMage">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -109,10 +99,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestMage" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestWarrior" />
         <item itemvalue="JUnit.TestRogue" />
         <item itemvalue="JUnit.TestRanger" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +238,8 @@
     <MESSAGE value="Test: added more tests" />
     <MESSAGE value="Test: added tests for remaining heroes" />
     <MESSAGE value="Chore: added configuration files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chore: added configuration files" />
+    <MESSAGE value="Test: renamed test classes and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test: renamed test classes and methods" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RPG_Heroes$WarrorTesting.ic" NAME="WarrorTesting Coverage Results" MODIFIED="1676136210566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

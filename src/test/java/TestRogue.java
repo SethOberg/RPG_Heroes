@@ -1,12 +1,12 @@
 import exceptions.InvalidArmorException;
 import exceptions.InvalidWeaponException;
 import heroes.HeroAttributes;
+import heroes.Ranger;
 import heroes.Rogue;
 import items.*;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestRogue {
 
@@ -17,18 +17,42 @@ public class TestRogue {
     }
 
     @Test
+    public void testRogueBaseStats() {
+        var rogue = new Rogue("someName");
+        var rogueBaseStats = rogue.getLevelAttributes();
+
+        var rogueBaseStatsOk = rogueBaseStats.getStrength() == 2
+                && rogueBaseStats.getDexterity() == 6
+                && rogueBaseStats.getIntelligence() == 1 ;
+
+        assertEquals(true, rogueBaseStatsOk);
+    }
+
+    @Test
+    public void testRogueStatsLevelUp() {
+        var rogue = new Rogue("someName");
+        rogue.levelUp();
+        var rogueBaseStats = rogue.getLevelAttributes();
+
+        var rogueBaseStatsOk = rogueBaseStats.getStrength() == 3
+                && rogueBaseStats.getDexterity() == 10
+                && rogueBaseStats.getIntelligence() == 2 ;
+
+        assertEquals(true, rogueBaseStatsOk);
+    }
+
+    @Test
     public void testLevelUp() {
         var rogue = new Rogue("someName");
         rogue.levelUp();
         assertEquals(2, rogue.getLevel());
     }
     @Test
-    public void testRogueCanEquipWeapon() throws InvalidWeaponException {
+    public void testRogueCanEquipWeapon() {
         var rogue = new Rogue("someName");
         var weapon = new Weapon("someSword", 1, EquipmentSlot.Weapon, 3, WeaponType.Sword);
 
-        rogue.equip(weapon);
-        assertNotEquals(null, rogue.getEquipment().get(EquipmentSlot.Weapon));
+        assertDoesNotThrow(() -> rogue.equip(weapon));
     }
 
     @Test
@@ -47,12 +71,7 @@ public class TestRogue {
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("clothArmor", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
 
-        try {
-            rogue.equip(armor);
-        } catch (InvalidArmorException e) {
-        }
-
-        assertEquals(null, rogue.getEquipment().get(EquipmentSlot.Body));
+        assertThrows(InvalidArmorException.class, () -> rogue.equip(armor));
     }
 
     @Test
@@ -61,21 +80,15 @@ public class TestRogue {
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("mailArmor", 2, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
 
-        try {
-            rogue.equip(armor);
-        } catch (InvalidArmorException e) {
-        }
-
-        assertEquals(null, rogue.getEquipment().get(EquipmentSlot.Body));
+        assertThrows(InvalidArmorException.class, () -> rogue.equip(armor));
     }
 
     @Test
-    public void testRogueCanEquipArmor() throws InvalidArmorException {
+    public void testRogueCanEquipArmor() {
         var rogue = new Rogue("someName");
         var armorAttributes = new HeroAttributes(1, 1, 3);
         var armor = new Armor("mailArmor", 1, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
 
-        rogue.equip(armor);
-        assertNotEquals(null, rogue.getEquipment().get(EquipmentSlot.Body));
+        assertDoesNotThrow(() -> rogue.equip(armor));
     }
 }
