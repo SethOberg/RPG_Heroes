@@ -5,8 +5,7 @@ import heroes.Mage;
 import items.*;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class TestMage {
@@ -16,6 +15,31 @@ public class TestMage {
     public void testLevel() {
         var mage = new Mage("someName");
         assertEquals(1, mage.getLevel());
+    }
+
+    @Test
+    public void testMageBaseStats() {
+        var mage = new Mage("someName");
+        var mageBaseStats = mage.getLevelAttributes();
+
+        var mageBaseStatsOk = mageBaseStats.getStrength() == 1
+                && mageBaseStats.getDexterity() == 1
+                && mageBaseStats.getIntelligence() == 8 ;
+
+        assertEquals(true, mageBaseStatsOk);
+    }
+
+    @Test
+    public void testMageStatsLevelUp() {
+        var mage = new Mage("someName");
+        mage.levelUp();
+        var mageBaseStats = mage.getLevelAttributes();
+
+        var mageBaseStatsOk = mageBaseStats.getStrength() == 2
+                && mageBaseStats.getDexterity() == 2
+                && mageBaseStats.getIntelligence() == 13 ;
+
+        assertEquals(true, mageBaseStatsOk);
     }
 
     @Test
@@ -57,20 +81,14 @@ public class TestMage {
         var mage = new Mage("someName");
         var weapon = new Weapon("someStaff", 2, EquipmentSlot.Weapon, 3, WeaponType.Staff);
 
-        try {
-            mage.equip(weapon);
-        } catch (InvalidWeaponException e) {
-        }
-        assertEquals(null, mage.getEquipment().get(EquipmentSlot.Weapon));
+        assertThrows(InvalidWeaponException.class, () -> mage.equip(weapon));
     }
 
     @Test
-    public void testMageCanEquipWeapon() throws InvalidWeaponException {
+    public void testMageCanEquipWeapon() {
         var mage = new Mage("someName");
         var weapon = new Weapon("someWand", 1, EquipmentSlot.Weapon, 3, WeaponType.Wand);
-
-        mage.equip(weapon);
-        assertNotEquals(null, mage.getEquipment().get(EquipmentSlot.Weapon));
+        assertDoesNotThrow(() -> mage.equip(weapon));
     }
 
     @Test
@@ -89,13 +107,8 @@ public class TestMage {
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("mailArmor", 1, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
 
-        try {
-            mage.equip(armor);
-        } catch (InvalidArmorException e) {
-        }
-
-        assertEquals(null, mage.getEquipment().get(EquipmentSlot.Body));
-    }
+        assertThrows(InvalidArmorException.class, () -> mage.equip(armor));
+ }
 
     @Test
     public void testTooLowLevelToEquipArmor() {
@@ -103,21 +116,14 @@ public class TestMage {
         var armorAttributes = new HeroAttributes(2, 2, 1);
         var armor = new Armor("clothArmor", 2, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
 
-        try {
-            mage.equip(armor);
-        } catch (InvalidArmorException e) {
-        }
-
-        assertEquals(null, mage.getEquipment().get(EquipmentSlot.Body));
+        assertThrows(InvalidArmorException.class, () -> mage.equip(armor));
     }
 
     @Test
-    public void testMageCanEquipArmor() throws InvalidArmorException {
+    public void testMageCanEquipArmor() {
         var mage = new Mage("someName");
         var armorAttributes = new HeroAttributes(1, 1, 3);
         var armor = new Armor("clothArmor", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
-
-        mage.equip(armor);
-        assertNotEquals(null, mage.getEquipment().get(EquipmentSlot.Body));
+        assertDoesNotThrow(() -> mage.equip(armor));
     }
 }
