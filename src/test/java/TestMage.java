@@ -18,6 +18,12 @@ public class TestMage {
     }
 
     @Test
+    public void testFailing() {
+        var mage = new Mage("someName");
+        assertEquals(3, mage.getLevel());
+    }
+
+    @Test
     public void testMageBaseStats() {
         var mage = new Mage("someName");
         var mageBaseStats = mage.getLevelAttributes();
