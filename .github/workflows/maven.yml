@@ -50,8 +50,8 @@ jobs:
           cache: maven
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Build and Run Tests
-        run: mvn test --batch-mode --fail-at-end
+      - name: Build and Test with Maven
+        run: mvn -B package --file pom.xml
       - name: Publish Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
