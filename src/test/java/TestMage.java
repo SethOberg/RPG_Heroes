@@ -76,6 +76,38 @@ public class TestMage {
         assertEquals(null, mage.getEquipment().get(EquipmentSlot.Weapon));
     }
 
+    //TODO - test not possible to equip weapon as armor
+    //TODO - test not possible to equip armor as weapon
+
+    @Test
+    public void testMageCannotEquipWeaponAsArmor() {
+        var mage = new Mage("someName");
+        var weapon = new Weapon("someWand", 1, EquipmentSlot.Weapon, 3, WeaponType.Wand);
+
+        try {
+            mage.equip(weapon);
+        } catch (InvalidWeaponException e) {
+        }
+        assertTrue(mage.getEquipment().get(EquipmentSlot.Body) == null
+                && mage.getEquipment().get(EquipmentSlot.Legs) == null
+                && mage.getEquipment().get(EquipmentSlot.Head) == null);
+    }
+
+    @Test
+    public void testMageCannotEquipArmorAsWeapon() {
+        var mage = new Mage("someName");
+        var armorAttributes = new HeroAttributes(1, 1, 3);
+        var armor = new Armor("clothArmor", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
+
+
+        try {
+            mage.equip(armor);
+        } catch (InvalidArmorException e) {
+        }
+        assertTrue(mage.getEquipment().get(EquipmentSlot.Weapon) == null);
+    }
+
+
     @Test
     public void testTooLowLevelToEquipWeapon() {
         var mage = new Mage("someName");
