@@ -76,9 +76,6 @@ public class TestMage {
         assertEquals(null, mage.getEquipment().get(EquipmentSlot.Weapon));
     }
 
-    //TODO - test not possible to equip weapon as armor
-    //TODO - test not possible to equip armor as weapon
-
     @Test
     public void testMageCannotEquipWeaponAsArmor() {
         var mage = new Mage("someName");
