@@ -13,6 +13,14 @@ The continous integration can be seen on the [Actions tab](https://github.com/Se
 ## Contributors 
 * Seth Öberg
 
+## UML class diagrams 
+
+### Heroes class diagram
+![heroes_class_diagram](https://user-images.githubusercontent.com/48513637/219433094-e6fb6f6b-20ae-4bb5-a80b-88c5888093a1.png)
+
+### Items class diagram 
+![items_class_diagram](https://user-images.githubusercontent.com/48513637/219433128-d55dd2c4-d1a1-41e8-975c-eed1b6714be8.png)
+
 ## Project
 RPGHeroes is a project consisting of different hero types, they all inherit from the base class hero, the 4 different types are: 
 * Mage
@@ -47,6 +55,5 @@ Each hero has 4 different slots they can equip items on, these are:
 * Body
 * Head 
 * Weapon
-
 
 
