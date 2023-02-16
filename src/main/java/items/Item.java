@@ -6,9 +6,6 @@ public abstract class Item {
 
     private EquipmentSlot equipmentSlot;
 
-    public Item() {
-    }
-
     public Item(String name, int requiredLevel, EquipmentSlot equipmentSlot) {
         this.name = name;
         this.requiredLevel = requiredLevel;
