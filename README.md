@@ -8,6 +8,9 @@ Each time a push to the master branch is done, a github action will be run, that
 * Maven
 * JUnit
 
+## Contributors 
+* Seth Öberg
+
 ## Project
 RPGHeroes is a project consisting of different hero types, they all inherit from the base class hero, the 4 different types are: 
 * Mage
@@ -20,7 +23,7 @@ They all have stats consisting of:
 * Dexterity
 * Intelligence 
 
-Each hero-type has different base stats and also gain different amounts in each stat depending on the hero type. For example mages gain more intelligence, while Rangers gain more dexterity. 
+Each hero-type has different base stats and also gain different amounts in each stat when levelling up depending on the hero type. For example mages gain more intelligence, while Rangers gain more dexterity. 
 
 Each hero can equip weapons and armor, each hero has different types of weapons and armor they can equip depending on their type. 
 
