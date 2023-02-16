@@ -1,0 +1,84 @@
+@startuml
+
+abstract class Item {
+- name : String
+- requiredLevel : int
+- equipmentSlot : EquipmentSlot
++ Item(name : String, requiredLevel : int,
+equipmentSlot : EquipmentSlot)
++ String getName() : String
++ setName(name : String) : void
++ getRequiredLevel() : int
++ setRequiredLevel(requiredLevel : int) : void
++ getEquipmentSlot() : EquipmentSlot
++ setEquipmentSlot(equipmentSlot : EquipmentSlot) : void
+}
+
+class Armor {
+- armorType : ArmorType
+- armorAttributes : HeroAttributes
++ Armor(name : String, requiredLevel : int,
+equipmentSlot : EquipmentSlot,armorType : ArmorType,
+armorAttributes : HeroAttributes)
++ getArmorType() : ArmorType
++ setArmorType(armorType : ArmorType) : void
++ getArmorAttributes() : HeroAttributes
++ setArmorAttributes(armorAttributes : HeroAttributes) : void
+}
+
+class Weapon {
+- weaponDamage : int
+- weaponType : WeaponType
++ Weapon(name : String, requiredLevel : int,
+equipmentSlot : EquipmentSlot,weaponDamage : int,
+weaponType : WeaponType)
++ getWeaponDamage() : int
++ setWeaponDamage(weaponDamage : int) : void
++ getWeaponType() : WeaponType
++ setWeaponType(weaponType : WeaponType) : void
+}
+
+enum ArmorType {
+Cloth
+Leather
+Mail
+Plate
+}
+
+enum EquipmentSlot {
+Legs
+Body
+Head
+Weapon
+}
+
+enum WeaponType {
+Axe
+Bow
+Dagger
+Hammer
+Staff
+Sword
+Wand
+}
+
+class HeroAttributes {
+- strength : int
+- dexterity : int
+- intelligence : int
+
++ HeroAttributes(strength : int, dexterity : int, intelligence : int)
++ getStrength() : int
++ getDexterity() : int
++ getIntelligence() : int
+}
+
+Item o-- EquipmentSlot : item has an
+Armor o-- HeroAttributes : armor has
+Armor o-- ArmorType : armor has an
+Weapon o-- WeaponType : weapon has a
+
+Item <|-- Armor : armor is an
+Item <|-- Weapon : weapon is an
+
+@enduml

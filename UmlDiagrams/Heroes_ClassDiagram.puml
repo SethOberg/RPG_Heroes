@@ -1,0 +1,60 @@
+@startuml
+
+abstract class Hero {
+- name : String
+- level : int
+- levelAttributes : HeroAttributes
+- equipment : HashMap<EquipmentSlot, Item>
+- validWeaponTypes : LinkedList<WeaponType>
+- validArmorTypes : LinkedList<ArmorType>
+
++ Hero(name : String)
++ getName() : String
++ setName(name : String) : void
++ totalAttributes() : HeroAttributes
++ equip(armor : Armor) : void
++ equip(weapon: Weapon) : void
++ displayHeroDetails() : String
++ {abstract} levelUp() : void
++ {abstract} damage() : int
+}
+
+class HeroAttributes {
+- strength : int
+- dexterity : int
+- intelligence : int
+
++ HeroAttributes(strength : int, dexterity : int, intelligence : int)
++ getStrength() : int
++ getDexterity() : int
++ getIntelligence() : int
+}
+
+class Ranger {
++ levelUp() : void
++ damage() : int
+}
+
+class Mage {
++ levelUp() : void
++ damage() : int
+}
+
+class Warrior {
++ levelUp() : void
++ damage() : int
+}
+
+class Rogue {
++ levelUp() : void
++ damage() : int
+}
+
+Hero o- HeroAttributes : a hero has
+
+Hero <|-- Mage
+Hero <|-- Warrior : is a
+Hero <|-- Rogue
+Hero <|-- Ranger : is a
+
+@enduml

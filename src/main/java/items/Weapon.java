@@ -4,10 +4,6 @@ public class Weapon extends Item {
     private int weaponDamage;
     private WeaponType weaponType;
 
-    public Weapon() {
-        super();
-    }
-
     public Weapon(String name, int requiredLevel, EquipmentSlot equipmentSlot, int weaponDamage, WeaponType weaponType) {
         super(name, requiredLevel, equipmentSlot);
         this.weaponDamage = weaponDamage;
