@@ -136,15 +136,15 @@ public abstract class Hero {
         totalAttributes.setIntelligence(getLevelAttributes().getIntelligence());
 
         //Use map to get all armor types and add
-        ArrayList<Armor> heroArmor = (ArrayList<Armor>) getEquipment().entrySet().stream()
-                .filter((item) -> item.getClass().isAssignableFrom(Armor.class))
+        ArrayList<Armor> heroArmor = (ArrayList<Armor>) getEquipment().values().stream()
                 .filter((item) -> item != null)
+                .filter((item) -> item.getClass().isAssignableFrom(Armor.class))
                 .map((armor) -> (Armor)armor).collect(Collectors.toList());
 
         for (Armor armor: heroArmor) {
-            totalAttributes.setIntelligence(totalAttributes().getIntelligence() + armor.getArmorAttributes().getIntelligence());
-            totalAttributes.setDexterity(totalAttributes().getDexterity() + armor.getArmorAttributes().getDexterity());
-            totalAttributes.setStrength(totalAttributes().getStrength() + armor.getArmorAttributes().getStrength());
+            totalAttributes.setStrength(totalAttributes.getStrength() + armor.getArmorAttributes().getStrength());
+            totalAttributes.setDexterity(totalAttributes.getDexterity() + armor.getArmorAttributes().getDexterity());
+            totalAttributes.setIntelligence(totalAttributes.getIntelligence() + armor.getArmorAttributes().getIntelligence());
         }
 
         return totalAttributes;

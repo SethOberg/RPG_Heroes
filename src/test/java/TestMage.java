@@ -137,7 +137,49 @@ public class TestMage {
         var armor = new Armor("mailArmor", 1, EquipmentSlot.Body, ArmorType.Mail, armorAttributes);
 
         assertThrows(InvalidArmorException.class, () -> mage.equip(armor));
- }
+    }
+
+    @Test
+    public void testTotalAttributes() {
+        var mage = new Mage("someName");
+        var armorAttributes = new HeroAttributes(2, 2, 2);
+        var armorLegs = new Armor("clothArmorLegs", 1, EquipmentSlot.Legs, ArmorType.Cloth, armorAttributes);
+        var armorBody = new Armor("clothArmorBody", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
+        var armorHead = new Armor("clothArmorHead", 1, EquipmentSlot.Head, ArmorType.Cloth, armorAttributes);
+
+        try {
+            mage.equip(armorLegs);
+            mage.equip(armorBody);
+            mage.equip(armorHead);
+        } catch(InvalidArmorException e) {
+        }
+
+        HeroAttributes total = mage.totalAttributes();
+
+        assertTrue(total.getStrength() == 7
+                && total.getDexterity() == 7
+                && total.getIntelligence() == 14);
+    }
+
+    @Test
+    public void testTotalAttributesTwoArmorItemsEquipped() {
+        var mage = new Mage("someName");
+        var armorAttributes = new HeroAttributes(2, 2, 2);
+        var armorLegs = new Armor("clothArmorLegs", 1, EquipmentSlot.Legs, ArmorType.Cloth, armorAttributes);
+        var armorBody = new Armor("clothArmorBody", 1, EquipmentSlot.Body, ArmorType.Cloth, armorAttributes);
+
+        try {
+            mage.equip(armorLegs);
+            mage.equip(armorBody);
+        } catch(InvalidArmorException e) {
+        }
+
+        HeroAttributes total = mage.totalAttributes();
+
+        assertTrue(total.getStrength() == 5
+                && total.getDexterity() == 5
+                && total.getIntelligence() == 12);
+    }
 
     @Test
     public void testTooLowLevelToEquipArmor() {
