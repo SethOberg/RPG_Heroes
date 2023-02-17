@@ -21,6 +21,15 @@ The continous integration can be seen on the [Actions tab](https://github.com/Se
 ### Items class diagram 
 ![items_class_diagram](https://user-images.githubusercontent.com/48513637/219433128-d55dd2c4-d1a1-41e8-975c-eed1b6714be8.png)
 
+## UML Sequence diagrams
+
+### Create Mage object
+![Mage_Create_Diagram](https://user-images.githubusercontent.com/48513637/219615416-7dc31002-253c-4739-ad38-04760529fdfd.jpg)
+
+### Create Armor object
+![Armor_Create_Diagram](https://user-images.githubusercontent.com/48513637/219615433-edfe64b3-2654-4881-827f-7e7de787b30a.jpg)
+
+
 ## Project
 RPGHeroes is a project consisting of different hero types, they all inherit from the base class hero, the 4 different types are: 
 * Mage
