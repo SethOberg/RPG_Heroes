@@ -16,15 +16,18 @@ The continous integration can be seen on the [Actions tab](https://github.com/Se
 ## UML class diagrams 
 
 ### Heroes class diagram
+(some attributes and methods were skipped to make diagrams more compact)
 ![heroes_class_diagram](https://user-images.githubusercontent.com/48513637/219433094-e6fb6f6b-20ae-4bb5-a80b-88c5888093a1.png)
 
 ### Items class diagram 
+(some attributes and methods were skipped to make diagrams more compact)
 ![items_class_diagram](https://user-images.githubusercontent.com/48513637/219433128-d55dd2c4-d1a1-41e8-975c-eed1b6714be8.png)
 
 ## UML Sequence diagrams
 
 ### Create Mage object
-![Mage_Create_Diagram](https://user-images.githubusercontent.com/48513637/219615416-7dc31002-253c-4739-ad38-04760529fdfd.jpg)
+![Create_Mage_Diagram](https://user-images.githubusercontent.com/48513637/219955293-8dee72ce-077a-4037-a8ed-9449d2333053.jpg)
+
 
 ### Create Armor object
 ![Armor_Create_Diagram](https://user-images.githubusercontent.com/48513637/219615433-edfe64b3-2654-4881-827f-7e7de787b30a.jpg)
@@ -64,5 +67,3 @@ Each hero has 4 different slots they can equip items on, these are:
 * Body
 * Head 
 * Weapon
-
-
