@@ -1,7 +1,6 @@
 import exceptions.InvalidArmorException;
 import exceptions.InvalidWeaponException;
 import heroes.HeroAttributes;
-import heroes.Rogue;
 import heroes.Warrior;
 import items.*;
 import org.junit.jupiter.api.Test;

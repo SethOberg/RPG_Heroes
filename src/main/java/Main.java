@@ -24,14 +24,8 @@ public class Main {
         mage.equip((Armor) clothArmorBody);
         mage.equip((Armor) clothArmorHead);
 
-        var total = mage.totalAttributes();
-        System.out.println(total.getStrength());
-        System.out.println(total.getDexterity());
-        System.out.println(total.getIntelligence());
-
-        //mage.equip((Weapon) weapon);
-        //mage.levelUp();
+        mage.equip((Weapon) weapon);
+        mage.levelUp();
         System.out.println(mage.displayHeroDetails());
-
     }
 }

@@ -4,10 +4,8 @@ import exceptions.InvalidArmorException;
 import exceptions.InvalidWeaponException;
 import items.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.stream.Collectors;
 
 public abstract class Hero {
     private String name;
@@ -20,16 +18,10 @@ public abstract class Hero {
 
 
     //constructor
-
-    public Hero() {
-        level = 1;
-        initializeSlots();
-    }
-
     public Hero(String name) {
         this.name = name;
         level = 1;
-        initializeSlots();
+        initializeEquipmentSlots();
     }
 
     public String getName() {
@@ -92,21 +84,29 @@ public abstract class Hero {
         this.equipment = equipment;
     }
 
-    public void initializeSlots() {
+    public void initializeEquipmentSlots() {
         equipment.put(EquipmentSlot.Legs, null);
         equipment.put(EquipmentSlot.Body, null);
         equipment.put(EquipmentSlot.Head, null);
         equipment.put(EquipmentSlot.Weapon, null);
     }
 
+    //called from subclasses when creating a new object,
+    //each hero start with different amounts in each stat
     public void initializeHeroAttributes(int strength, int dexterity, int intlligence) {
         this.levelAttributes.setStrength(strength);
         this.levelAttributes.setDexterity(dexterity);
         this.levelAttributes.setIntelligence(intlligence);
     }
 
+    //The level up function is implemented in subclasses
+    //since each hero gains a different amount of stats depending
+    //on their subclass, e.g. mages gain more intelligence
+    //than warriors when levelling up
     public abstract void levelUp();
 
+    //A weapon is equipped if it's allowed for the subclass
+    //and if the hero has the required level for the weapon
     public void equip(Weapon weapon) throws InvalidWeaponException {
         if(getValidWeaponTypes().indexOf(weapon.getWeaponType()) == -1) {
             throw new InvalidWeaponException(getClass().getSimpleName() + "s cannot equip " + weapon.getWeaponType() + "s");
@@ -116,6 +116,8 @@ public abstract class Hero {
         } else addEquipment(EquipmentSlot.Weapon, weapon);
     }
 
+    //Armor is equipped if it's allowed for the subclass
+    //and if the hero has the required level for the armor
     public void equip(Armor armor) throws InvalidArmorException {
         if(getValidArmorTypes().indexOf(armor.getArmorType()) == -1) {
             throw new InvalidArmorException(getClass().getSimpleName() + "s cannot equip " + armor.getArmorType() + " armor");
@@ -127,8 +129,13 @@ public abstract class Hero {
         }
     }
 
+    //The damage is implemented in subclasses that inherit from
+    //the Hero base class and is calculated with the damaging attribute
+    //of a hero, for e.g. the damaging attribute for mages is intelligence
     public abstract int damage();
 
+    //The total attributes are the stats of a hero combined
+    //with the stats from all equipped armor
     public HeroAttributes totalAttributes() {
         HeroAttributes totalAttributes = new HeroAttributes();
         totalAttributes.setStrength(getLevelAttributes().getStrength());
