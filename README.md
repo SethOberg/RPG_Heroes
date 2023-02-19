@@ -1,7 +1,7 @@
 # RPG_Heroes
 
 ## Continous integration 
-Each time a push to the master branch is done, a github action will be run, that builds the project and checks all the results from the JUnit unit tests, if there are failing unit tests, the build will fail. 
+Each time a push to the master branch is done, a github action will be run, that builds the project and checks all the results from the JUnit unit tests. The test results will be published in a test report and if there are failing unit tests, the build will fail. 
 
 The continous integration can be seen on the [Actions tab](https://github.com/SethOberg/RPG_Heroes/actions).
 
