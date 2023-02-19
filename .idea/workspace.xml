@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="453df4ca-2ae1-4362-8ae4-02c3479ac872" name="Changes" comment="Style: use stream foreach instead of for loop">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="453df4ca-2ae1-4362-8ae4-02c3479ac872" name="Changes" comment="Fix: committed unversioned file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRanger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestWarrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
   </component>
@@ -63,7 +57,7 @@
       <recent name="C:\Users\SOber1\Desktop\Projekt\IntelliJProjects\RPG_Heroes\UmlDiagrams" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestMage">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="RPG_Heroes" />
@@ -109,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestWarrior" />
         <item itemvalue="JUnit.TestRogue" />
         <item itemvalue="JUnit.TestRanger" />
         <item itemvalue="JUnit.TestMage" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676581487689</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Docs: added comments and removed unused imports">
+      <created>1676815666226</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676815666226</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Fix: committed unversioned file">
+      <created>1676816155439</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676816155439</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,7 +321,9 @@
     <MESSAGE value="Feat: added UML class diagrams" />
     <MESSAGE value="Fix: fixed bug &amp; added new test cases for items" />
     <MESSAGE value="Style: use stream foreach instead of for loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style: use stream foreach instead of for loop" />
+    <MESSAGE value="Docs: added comments and removed unused imports" />
+    <MESSAGE value="Fix: committed unversioned file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: committed unversioned file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RPG_Heroes$WarrorTesting.ic" NAME="WarrorTesting Coverage Results" MODIFIED="1676136210566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

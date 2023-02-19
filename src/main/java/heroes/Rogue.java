@@ -11,7 +11,6 @@ public class Rogue extends Hero {
 
     public Rogue(String name) {
         super(name);
-        initializeEquipmentSlots();
         initializeHeroAttributes(2, 6, 1);
         addValidArmorAndWeaponTypes();
     }

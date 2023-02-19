@@ -11,7 +11,6 @@ public class Warrior extends Hero {
 
     public Warrior(String name) {
         super(name);
-        initializeEquipmentSlots();
         initializeHeroAttributes(5, 2, 1);
         addValidArmorAndWeaponTypes();
     }

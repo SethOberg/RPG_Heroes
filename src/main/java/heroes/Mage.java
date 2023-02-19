@@ -10,7 +10,6 @@ import java.util.LinkedList;
 public class Mage extends Hero {
     public Mage(String name) {
         super(name);
-        initializeEquipmentSlots();
         initializeHeroAttributes(1, 1, 8);
         addValidArmorAndWeaponTypes();
     }

@@ -11,7 +11,6 @@ public class Ranger extends Hero {
 
     public Ranger(String name) {
         super(name);
-        initializeEquipmentSlots();
         initializeHeroAttributes(1, 7, 1);
         addValidArmorAndWeaponTypes();
     }
